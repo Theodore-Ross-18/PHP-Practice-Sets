@@ -23,6 +23,27 @@ function squareRoot($num) {
     
     return $x;
 }
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $side1 = floatval($_POST['side1']);
+    $side2 = floatval($_POST['side2']);
+    $side3 = floatval($_POST['side3']);
+    
+    if (is_numeric($side1) && is_numeric($side2) && is_numeric($side3) && 
+        $side1 > 0 && $side2 > 0 && $side3 > 0 && 
+        ($side1 + $side2 > $side3) && ($side1 + $side3 > $side2) && ($side2 + $side3 > $side1)) {
+        
+        $s = ($side1 + $side2 + $side3) / 2;
+        $area = squareRoot($s * ($s - $side1) * ($s - $side2) * ($s - $side3));
+        if ($area > 0) {
+            echo "<p>Triangle Area: " . number_format($area, 2) . " square units</p>";
+        } else {
+            echo "<p>Invalid input. The given sides do not form a valid triangle.</p>";
+        }
+    } else {
+        echo "<p>Invalid input. Please enter positive numeric values where the sum of any two sides is greater than the third.</p>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
