@@ -5,7 +5,8 @@
 - Using count() from available array functions in the condition of the for loop. -->
 
 <?php
-
+// An array of fruits
+$fruits = ["Apple", "Banana", "Cherry", "Mango", "Orange"];
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit List</title>
 </head>
-<body>
-    
+<body class="container mt-5">
+<h2 class="text-center">List of Fruits</h2>
+    <ol class="list-group list-group-numbered">
+        <?php
+        for ($i = 0; $i < count($fruits); $i++) {
+            echo "<li class='list-group-item'>" . $fruits[$i] . "</li>";
+        }
+        ?>
+    </ol>
 </body>
 </html>
