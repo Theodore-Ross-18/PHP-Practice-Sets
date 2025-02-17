@@ -7,7 +7,22 @@
 // where s = side1 + side2 + side3 / 2
 
 <?php
-
+function squareRoot($num) {
+    if ($num == 0 || $num == 1) {
+        return $num;
+    }
+    
+    $x = $num;
+    $y = 1;
+    $precision = 0.000001; // Accuracy level
+    
+    while ($x - $y > $precision) {
+        $x = ($x + $y) / 2;
+        $y = $num / $x;
+    }
+    
+    return $x;
+}
 ?>
 
 <!DOCTYPE html>
