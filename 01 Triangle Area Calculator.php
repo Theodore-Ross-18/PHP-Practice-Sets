@@ -5,3 +5,19 @@
 
 // area_of_triangle = sqrt(s * (s - side1) * (s - side2) * (s - side3))
 // where s = side1 + side2 + side3 / 2
+
+<?php
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Area Calculator</title>
+</head>
+<body>
+    
+</body>
+</html>
