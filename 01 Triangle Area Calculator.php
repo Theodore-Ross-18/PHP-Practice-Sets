@@ -47,20 +47,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triangle Area Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-<h2>Calculate Triangle Area</h2>
-    <form method="POST">
-        Side 1: <input type="text" name="side1" required> <br>
-        Side 2: <input type="text" name="side2" required> <br>
-        Side 3: <input type="text" name="side3" required> <br>
-        <input type="submit" value="Calculate">
+<body class="container mt-5">
+    <h2 class="text-center">Calculate Triangle Area</h2>
+    <form method="POST" class="border p-4 rounded shadow">
+        <div class="mb-3">
+            <label class="form-label">Side 1:</label>
+            <input type="text" name="side1" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Side 2:</label>
+            <input type="text" name="side2" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Side 3:</label>
+            <input type="text" name="side3" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Calculate</button>
     </form>
-    <p>Valid inputs: Positive numerical values where the sum of any two sides is greater than the third.</p>
+    <p class="mt-3 text-center">Valid inputs: Positive numerical values where the sum of any two sides is greater than the third.</p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
