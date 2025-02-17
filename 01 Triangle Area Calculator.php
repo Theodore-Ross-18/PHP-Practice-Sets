@@ -18,6 +18,13 @@
     <title>Triangle Area Calculator</title>
 </head>
 <body>
-    
+<h2>Calculate Triangle Area</h2>
+    <form method="POST">
+        Side 1: <input type="text" name="side1" required> <br>
+        Side 2: <input type="text" name="side2" required> <br>
+        Side 3: <input type="text" name="side3" required> <br>
+        <input type="submit" value="Calculate">
+    </form>
+    <p>Valid inputs: Positive numerical values where the sum of any two sides is greater than the third.</p>
 </body>
 </html>
